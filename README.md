@@ -175,8 +175,6 @@
 
 # 1 `borb` in action
 
-![enter image description here](chapter_001/img/chapter_illustration.png)
-
 <div style="page-break-before: always;"></div>
 
 ## 1.1 About this book
@@ -397,8 +395,6 @@ You're all awesome, and you've helped me out tremendously.
 <div style="page-break-before: always;"></div>
 
 # 2 Creating PDF documents from scratch
-
-![enter image description here](chapter_002/img/chapter_illustration.png)
 
 <div style="page-break-before: always;"></div>
 
@@ -2996,8 +2992,6 @@ check out some of the deep-dives, where I'll show you how to create an invoice f
 
 # 3 Container `LayoutElement` objects
 
-![enter image description here](chapter_003/img/chapter_illustration.png)
-
 <div style="page-break-before: always;"></div>
 
 Now that you have a firm grasp on the basic `LayoutElement` objects, you can start combining them in lists and tables.
@@ -4444,8 +4438,6 @@ You've seen some pratical differences between the various implementations of `Ta
 
 # 4 Forms
 
-![enter image description here](chapter_004/img/chapter_illustration.png)
-
 <div style="page-break-before: always;"></div>
 
 ## 4.1 Acroforms vs XFA
@@ -5263,8 +5255,6 @@ For some use-cases, you won't be creating the PDF's yourself. Imagine setting up
 Most of these workflows can be boiled down to some simple steps that can be handled with `borb`.
 
 In this section you'll learn the ins and outs of working with existing PDF's.
-
-![enter image description here](chapter_005/img/chapter_illustration.png)
 
 <div style="page-break-before: always;"></div>
 
@@ -7384,8 +7374,6 @@ from the PDF-spec:
 > document, or provides a way to interact with the user by means of the mouse and keyboard. PDF includes a
 > wide variety of standard annotation types, described in detail in 12.5.6, “Annotation Types.”
 
-![enter image description here](chapter_006/img/chapter_illustration.png)
-
 <div style="page-break-before: always;"></div>
 
 ## 6.1 Adding geometric shapes
@@ -8166,8 +8154,6 @@ In this section you'll learn how to:
 - Export a PDF to various image formats
 - Export certain formats (HTML, Markdown) to PDF
 
-![enter image description here](chapter_007/img/chapter_illustration.png)
-
 <div style="page-break-before: always;"></div>
 
 ## 7.1 Extracting tables from a PDF
@@ -8898,8 +8884,6 @@ The examples in this chapter may not be for everyone, but you will undoubtedly g
 <div style="page-break-before: always;"></div>
 
 # 8 Deep Dive into `borb`
-
-![enter image description here](chapter_008/img/chapter_illustration.png)
 
 <div style="page-break-before: always;"></div>
 
@@ -9768,8 +9752,6 @@ In the final PDF you can see the word "survived" was hyphenated as well as the w
 
 In this chapter we'll build some practical PDF documents that are ready-to-use.
 This chapter assumes you have a good working knowledge of all the basic `LayoutElement`  concepts.
-
-![enter image description here](chapter_009/img/chapter_illustration.png)
 
 <div style="page-break-before: always;"></div>
 
