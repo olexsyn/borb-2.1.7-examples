@@ -687,6 +687,21 @@ Internally, whenever a `Paragraph` is rendered, it will divide itself into `Line
 
 <div style="page-break-before: always;"></div>
 
+### 2.4.0 Властивості параграфу
+
+- `respect_newlines_in_text=True` - дозволяє переносити частину рядка на нову лінію, наприклад, використовуючи символ `\n`.
+- `respect_spaces_in_text=True` - дозволяє використовувати декілька пробілів підряд
+
+```python
+Paragraph("1st line" + "\n" + "2nd line",
+	respect_newlines_in_text=True,
+)
+
+Paragraph("Several spaces in a row:" + "            " + "end.",
+	respect_spaces_in_text=True,
+)
+```
+
 ### 2.4.1 Setting the `Font` of a `Paragraph`
 
 One of the things that can really make a document stand out is a custom `Font`. By default, `borb` will use Helvetica, but this is not always desired. In this example, you'll learn how to set the `Font` of a `Paragraph`.
