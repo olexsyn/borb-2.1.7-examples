@@ -713,6 +713,45 @@ Paragraph("Several spaces in a row:" + "            " + "end.",
 )
 ```
 
+Ось так, наприклад, я реалізував блок тексту, що буде вставлений у комірку таблиця, в якому деякі частини написані жирним шрифтом:
+
+Температура: **22** °С  
+відносна вологість повітря: **77** %  
+атмосферний тиск: **99.2** кПа  
+
+```python
+	atm_block: BlockFlow = BlockFlow()
+
+	flow: InlineFlow = InlineFlow()
+	flow.add(ChunkOfText(tr('TX_TEMPERATURE').capitalize() + ": ", font=font_RobotoRegular))
+	flow.add(ChunkOfText(str(clbdata['temperat']), font=font_RobotoBold))
+	flow.add(ChunkOfText(tr('TX_TEMPERATURE_UNIT'), font=font_RobotoRegular))
+	atm_block.add(flow).add(Paragraph("\n", font_size=Decimal(0)))
+
+	flow: InlineFlow = InlineFlow()
+	flow.add(ChunkOfText(tr('TX_HUMIDITY_RELATIVE') + ": ", font=font_RobotoRegular))
+	flow.add(ChunkOfText(str(clbdata['humidity']), font=font_RobotoBold))
+	flow.add(ChunkOfText(tr('TX_HUMIDITY_UNIT'), font=font_RobotoRegular))
+	atm_block.add(flow).add(Paragraph("\n", font_size=Decimal(0)))
+
+	flow: InlineFlow = InlineFlow()
+	flow.add(ChunkOfText(tr('TX_PRESSURE_ATMOS') + ": ", font=font_RobotoRegular))
+	flow.add(ChunkOfText(str(clbdata['pressure']), font=font_RobotoBold))
+	flow.add(ChunkOfText(tr('TX_PRESSURE_UNIT'), font=font_RobotoRegular))
+
+	atm_block.add(flow)
+
+	layout.add(
+		FixedColumnWidthTable(
+			number_of_columns=2,
+			number_of_rows=5,
+		)
+		.add(
+			atm_block
+		)
+	...
+```
+
 ### 2.4.1 Setting the `Font` of a `Paragraph`
 
 One of the things that can really make a document stand out is a custom `Font`. By default, `borb` will use Helvetica, but this is not always desired. In this example, you'll learn how to set the `Font` of a `Paragraph`.
