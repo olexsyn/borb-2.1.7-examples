@@ -672,18 +672,29 @@ The deep-dive will take you on a journey through the entire process from `str` t
 
 The easiest way to add text to a PDF is by using a `Paragraph` object. `Paragraph` represents a piece of text where:
 
-- All characters are rendered in the same Font
-- All characters are rendered in the same color
+Найпростіший спосіб додати текст до PDF-файлу за допомогою об’єкта `Paragraph`. `Paragraph` представляє частину тексту, де:
+
+- All characters are rendered in the same Font - Усі символи відображаються одним шрифтом
+- All characters are rendered in the same color - Усі символи відображаються одним кольором
 
 `Paragraph` is typically a block-element (meaning it has a bottom and top padding).
+
+Зазвичай `Paragraph` є блочним елементом (тобто він має нижній і верхній відступи).
 
 `HeterogeneousParagraph` represents a `Paragraph` whose content may not all be rendered the same.
 This can be particularly useful if you'd like to have some words in **bold** in a `Paragraph` or perhaps even a different color, for emphasis.
 
+`HeterogeneousParagraph` представляє `Paragraph`, вміст якого може не відображатися однаково.
+Це може бути особливо корисним, якщо ви бажаєте, щоб деякі слова були виділені **жирним** шрифтом в `абзаці` або, можливо, навіть іншим кольором, для акценту.
+
 `HeterogeneousParagraph` is made up of smaller pieces of content called `ChunkOfText` objects.
 `ChunkOfText` is the atomic element as far as text-rendering is considered.
 
+`HeterogeneousParagraph` складається з менших фрагментів вмісту, які називаються об’єктами `ChunkOfText`. `ChunkOfText` є атомарним елементом, що стосується відтворення тексту.
+
 Internally, whenever a `Paragraph` is rendered, it will divide itself into `LineOfText` objects, each of which will divide itself in `ChunkOfText` objects.
+
+Всередині кожного разу, коли `Paragraph` відображається, він ділиться на об’єкти `LineOfText`, кожен з яких ділиться на об’єкти `ChunkOfText`.
 
 <div style="page-break-before: always;"></div>
 
